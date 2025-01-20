@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Analytics - TradeX</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="analytics.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="dashboard.html">TradeX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Recent Transactions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="analytics.html">Analytics</a>
+                    </li>
+                    
+                </ul>
+                <div class="user-menu">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <span class="user-name">John Doe</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" onclick="handleLogout()">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Analytics Content -->
+    <div class="analytics-container">
+        <div class="container py-5">
+            <!-- Header Section -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h1>Ad Performance Analytics</h1>
+                    <p class="text-white">Version: <span id="versionInfo">20220620-desktop-1</span></p>
+                </div>
+            </div>
+
+            <!-- Quick Stats Cards -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3>Total Bidders</h3>
+                        <p class="value">21</p>
+                        <span class="trend positive">Active Bidders</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3>Average Bid Factor</h3>
+                        <p class="value">0.96</p>
+                        <span class="trend neutral">Performance Score</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3>Ad Units</h3>
+                        <p class="value">3</p>
+                        <span class="trend positive">Active Units</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3>Refresh Rate</h3>
+                        <p class="value">30s</p>
+                        <span class="trend neutral">Standard Refresh</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Charts -->
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <div class="content-card">
+                        <h2>Bidder Performance</h2>
+                        <canvas id="bidderPerformance"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-card">
+                        <h2>Ad Unit Size Distribution</h2>
+                        <canvas id="adUnitSizes"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Units Table -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="content-card">
+                        <h2>Ad Units Configuration</h2>
+                        <div class="table-responsive">
+                            <table class="table table-dark table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Placement</th>
+                                        <th>Sizes</th>
+                                        <th>Refresh (s)</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Billboard_Default</td>
+                                        <td>980x250, 970x250, 970x90, 728x90</td>
+                                        <td>30</td>
+                                        <td><span class="badge bg-success">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sideblock_1_Default</td>
+                                        <td>300x600, 300x250, 336x280</td>
+                                        <td>30</td>
+                                        <td><span class="badge bg-success">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sideblock_2_Default</td>
+                                        <td>336x280, 300x250</td>
+                                        <td>30</td>
+                                        <td><span class="badge bg-success">Active</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="analytics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

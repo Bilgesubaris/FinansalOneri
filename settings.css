@@ -1,0 +1,81 @@
+:root {
+    --primary-blue: #00b7ff;
+    --dark-bg: #0a1929;
+    --secondary-dark: #1a2937;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar {
+    background-color: transparent !important;
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    color: var(--primary-blue) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: white !important;
+    margin: 0 1rem;
+}
+
+.nav-link:hover {
+    color: var(--primary-blue) !important;
+}
+/* Butonlar */
+.btn-primary {
+    background-color: var(--primary-blue);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-primary:hover {
+    background-color: #0095d1;
+}
+
+.btn-light {
+    background-color: white;
+    color: var(--primary-blue);
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-light:hover {
+    background-color: #f0f0f0;
+}
+.settings-container .list-group-item {
+    background: #0a1929;  /* Dashboard ile aynı arka plan rengi */
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.settings-container .list-group-item.active {
+    background-color: #2b709b;  /* Seçili olduğunda navbar rengi */
+    border-color: #2b709b;
+}
+
+.settings-container .list-group-item:hover {
+    background-color: #2b709b;  /* Hover durumunda navbar rengi */
+    color: white;
+}
+
+.settings-container .btn-primary {
+    background-color: #1c4966;
+    border-color: #1c4966;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+.settings-container .btn-primary:hover {
+    background-color: #153650;
+    border-color: #153650;
+}

@@ -1,0 +1,404 @@
+:root {
+    --primary-blue: #00b7ff;
+    --dark-bg: #0a1929;
+    --secondary-dark: #1a2937;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Stilleri */
+.navbar {
+    background-color: transparent !important;
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    color: var(--primary-blue) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: white !important;
+    margin: 0 1rem;
+}
+
+.nav-link:hover {
+    color: var(--primary-blue) !important;
+}
+
+/* Ana Bölüm */
+.hero {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-blue);
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ffffff99;
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+
+/* Özellikler Bölümü */
+.features {
+    background-color: var(--secondary-dark);
+    padding: 80px 0;
+}
+
+.feature-box {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feature-box h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.feature-box p {
+    color: #ffffff99;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 0;
+    background-color: var(--dark-bg);
+}
+
+.testimonials .container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.testimonial {
+    flex: 1;
+    background-color: var(--secondary-dark);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 500px;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.testimonial cite {
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    font-style: normal;
+    display: block;
+    margin-top: 1rem;
+}
+
+/* Responsive tasarım için */
+@media (max-width: 768px) {
+    .testimonials .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .testimonial {
+        width: 100%;
+    }
+}
+
+/* Çağrı Bölümü */
+.cta {
+    background-color: var(--primary-blue);
+    padding: 60px 0;
+}
+
+.cta h2 {
+    margin-bottom: 2rem;
+}
+
+/* Butonlar */
+.btn-primary {
+    background-color: var(--primary-blue);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-primary:hover {
+    background-color: #0095d1;
+}
+
+.btn-light {
+    background-color: white;
+    color: var(--primary-blue);
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-light:hover {
+    background-color: #f0f0f0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-dark);
+    padding: 20px 0;
+    color: #ffffff99;
+}
+
+/* Auth sayfaları için stiller */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.auth-box {
+    background-color: var(--secondary-dark);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-box h2 {
+    color: var(--primary-blue);
+}
+
+.form-label {
+    color: #ffffff;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--primary-blue);
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(0, 183, 255, 0.25);
+}
+
+.form-check-label {
+    color: #ffffff99;
+}
+
+/* Navbar auth butonları için stil */
+.auth-buttons .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.auth-buttons .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Animasyon tanımı */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+} 
+
+/* Get Started butonu için özel stil */
+.hero .btn-primary {
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 114, 255, 0.3);
+}
+
+.hero .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 114, 255, 0.5);
+}
+
+.hero .btn-primary::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+} 
+
+/* Dashboard Styles */
+.dashboard-container {
+    background-color: var(--dark-bg);
+    min-height: calc(100vh - 76px);
+}
+
+.stats-card {
+    background-color: var(--secondary-dark);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stats-card h3 {
+    font-size: 1rem;
+    color: #ffffff99;
+    margin-bottom: 1rem;
+}
+
+.stats-card .value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.trend {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.trend.positive {
+    color: #00ff88;
+}
+
+.trend.negative {
+    color: #ff4444;
+}
+
+.content-card {
+    background-color: var(--secondary-dark);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-card h2 {
+    font-size: 1.2rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.activity-item, .watch-item {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activity-item:last-child, .watch-item:last-child {
+    border-bottom: none;
+}
+
+.time {
+    color: #ffffff99;
+    font-size: 0.9rem;
+}
+
+.action {
+    color: white;
+    font-weight: 500;
+}
+
+.details {
+    color: #ffffff99;
+}
+
+.symbol {
+    font-weight: bold;
+    color: white;
+}
+
+.price {
+    color: #ffffff99;
+}
+
+.change {
+    font-weight: 500;
+}
+
+.change.positive {
+    color: #00ff88;
+}
+
+.change.negative {
+    color: #ff4444;
+}
+
+.user-menu .btn {
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.user-menu .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Login toggle buttons */
+.btn-group .btn {
+    min-width: 120px;
+}
+
+.btn-group .btn.active {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-group .btn:not(.active) {
+    background-color: transparent;
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.btn-group .btn:not(.active):hover {
+    background-color: rgba(0, 183, 255, 0.1);
+}
